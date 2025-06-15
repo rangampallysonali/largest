@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout'){
             steps {
                 
-                git ' https://github.com/rangampallysonali/largest '
+                git ' https://github.com/rangampallysonali/largest.git'
                
             }
         }
