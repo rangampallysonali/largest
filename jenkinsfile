@@ -1,0 +1,23 @@
+pipeline {
+    agent {
+        docker {
+            image 'openjdk:17'
+        }
+    }
+    stages {
+        stage('Compile'){
+            steps {
+                sh'''
+                javac main.java
+                '''
+            }
+        }
+        stage('run') {
+            steps {
+                sh '''
+                java main.java
+                '''
+            }
+        }
+    }
+}
